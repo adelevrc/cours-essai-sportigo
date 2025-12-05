@@ -6,10 +6,9 @@ st.title("Analyse des inscriptions")
 
 # 1️⃣ Télécharger le fichier CSV
 uploaded_file = st.file_uploader("Choisir un fichier CSV", type="csv")
-
 if uploaded_file is not None:
     # Lire le CSV
-    df = pd.read_csv(uploaded_file)
+    df = pd.read_csv(uploaded_file, sep=';', encoding='utf-8')
     
     # Convertir creation_date en datetime
     df['creation_date_dt'] = df['creation_date'].apply(
