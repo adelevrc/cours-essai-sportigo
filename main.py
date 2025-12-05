@@ -37,7 +37,7 @@ if uploaded_file is not None:
     df = df.sort_values(by='creation_date_dt', ascending=True)
     
     # Colonnes finales
-    df_final = df[['Nom', 'Prénom', 'Type', 'date_inscription', 'Téléphone']]
+    df_final = df[['Nom', 'Prenom', 'Type', 'date_inscription', 'Téléphone']]
 
     # 2️⃣ Tableau des prospects
     prospects = df_final[df_final['Type'].str.lower() == 'prospect']
